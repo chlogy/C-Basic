@@ -6,29 +6,29 @@ using namespace std;
 
 int main()
 {
-	cout << "Hello World\n";	// ÀÌ½ºÄÉÀÌÇÁ ¹®ÀÚ
+	cout << "Hello World\n";	// ì´ìŠ¤ì¼€ì´í”„ ë¬¸ìž
 	cout << "Hello World\t";
 	cout << "Hello World" << endl;
 	
 	/*
-		º¯¼ö : º¯ÇÏ´Â ¼ö. °ªÀÌ ¹Ù²ð ¼ö ÀÖ´Ù. (°ªÀ» ÀúÀåÇÏ´Â °ø°£)
+		ë³€ìˆ˜ : ë³€í•˜ëŠ” ìˆ˜. ê°’ì´ ë°”ë€” ìˆ˜ ìžˆë‹¤. (ê°’ì„ ì €ìž¥í•˜ëŠ” ê³µê°„)
 
-		¿ë·®ÀÇ ÃÖ¼Ò´ÜÀ§ : bit
+		ìš©ëŸ‰ì˜ ìµœì†Œë‹¨ìœ„ : bit
 		1Byte = 8bit
 		1Kbyte = 1024Byte
 		1Mbyte = 1024Kbyte
 		1Gbyte = 1024Mbyte
 		1Tbyte = 1024Gbyte
 
-		Á¾·ù		|		¿ë·®(Å©±â)		|	µ¥ÀÌÅÍ	|		Ç¥Çö ¹üÀ§		|		unsigned		|
-		char	|		1byte			|	¹®ÀÚ		|	   -128 ~ 127		|		0 ~ 255			|
-		bool	|		1byte			|	Âü/°ÅÁþ	|	   true / false		|	  true / false		|
-		short	|		2byte			|	Á¤¼ö		|	  -32768 ~ 32767	|		0 ~ 65535		|
-		int		|		4byte			|	Á¤¼ö		|	  ¾à -21¾ï ~ 21¾ï	|		0 ~ ¾à 42¾ï		|
-		float	|		4byte			|	½Ç¼ö		|
-		double	|		8byte			|	½Ç¼ö		|
+		ì¢…ë¥˜    |       	    ìš©ëŸ‰(í¬ê¸°)		  |	    ë°ì´í„°	         |		í‘œí˜„ ë²”ìœ„	       |		unsigned	      |
+		char	|	 	1byte			|	ë¬¸ìž		|	   -128 ~ 127		 |		0 ~ 255			|
+		bool	|		1byte			|	ì°¸/ê±°ì§“	       |	   true / false		|	  true / false		       |
+		short	| 		2byte			|	ì •ìˆ˜		|	  -32768 ~ 32767	 |		0 ~ 65535		|
+		int	|	        4byte			|	ì •ìˆ˜		|	  ì•½ -21ì–µ ~ 21ì–µ	      |		0 ~ ì•½ 42ì–µ		    |
+		float	|		4byte			|	ì‹¤ìˆ˜		|
+		double	|		8byte			|	ì‹¤ìˆ˜		|
 
-		´ëÀÔ¿¬»êÀÚ : = ¿À¸¥ÂÊ¿¡ ÀÖ´Â °ªÀ» ¿ÞÂÊ º¯¼ö¿¡ ³Ö´Â´Ù. 
+		ëŒ€ìž…ì—°ì‚°ìž : = ì˜¤ë¥¸ìª½ì— ìžˆëŠ” ê°’ì„ ì™¼ìª½ ë³€ìˆ˜ì— ë„£ëŠ”ë‹¤. 
 	*/
 	// lValue , RValue
 	int Number = 10;
@@ -37,7 +37,7 @@ int main()
 	
 	bool	bTest = true;
 	bTest = false;
-	cout << bTest << endl;		// false : 0		true : 0ÀÌ ¾Æ´Ñ ¸ðµç ¼ö
+	cout << bTest << endl;		// false : 0		true : 0ì´ ì•„ë‹Œ ëª¨ë“  ìˆ˜
 
 	char	cTest = 66;
 	cout << cTest << endl;
