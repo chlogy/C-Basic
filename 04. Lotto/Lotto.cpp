@@ -33,7 +33,7 @@ int main()
 		cout << iLotto[i] << "\t";
 	}
 
-	cout << "º¸³Ê½º ¹øÈ£ : " << iLotto[6] << endl;
+	cout << "ë³´ë„ˆìŠ¤ : " << iLotto[6] << endl;
 
 	return 0;
 }
