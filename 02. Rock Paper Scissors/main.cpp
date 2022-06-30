@@ -13,83 +13,83 @@ enum ROCK_PARPER_SCISSORS
 
 int main()
 {
-	// ÄÄÇ»ÅÍ°¡ ·£´ýÇÑ °ªÀ» ³»¾ßÇÏ±â ¶§¹®¿¡ ·£´ýÅ×ÀÌºíÀ» ¸¸µç´Ù.
+	// ì»´í“¨í„°ê°€ ëžœë¤í•œ ê°’ì„ ë‚´ì•¼í•˜ê¸° ë•Œë¬¸ì— ëžœë¤í…Œì´ë¸”ì„ ë§Œë“ ë‹¤.
 	srand(time(NULL));
 
-	// ÇÃ·¹ÀÌ¾î¿Í ÄÄÇ»ÅÍÀÇ °ªÀ» ÀúÀåÇÒ º¯¼ö¸¦ ¸¸µç´Ù.
+	// í”Œë ˆì´ì–´ì™€ ì»´í“¨í„°ì˜ ê°’ì„ ì €ìž¥í•  ë³€ìˆ˜ë¥¼ ë§Œë“ ë‹¤.
 	int iPlayer, iComputer;
 
-	// ÇÃ·¹ÀÌ¾î¿Í ÄÄÇ»ÅÍÀÇ ÀÌ¸§À» ¼³Á¤
+	// í”Œë ˆì´ì–´ì™€ ì»´í“¨í„°ì˜ ì´ë¦„ì„ ì„¤ì •
 	char strName[NAME_SIZE] = {};
 	char EnemyName[NAME_SIZE] = {};
 
 	system("cls");
 	cout << "_______ ROCK PAPER SCSISSORS _______" << endl << endl;
-	cout << "PlayerÀÇ ÀÌ¸§ : ";
+	cout << "Playerì˜ ì´ë¦„ : ";
 	cin >> strName;
 
-	cout << "»ó´ëÀÇ ÀÌ¸§ : ";
+	cout << "ìƒëŒ€ì˜ ì´ë¦„ : ";
 	cin >> EnemyName;
 
 
-	// °ÔÀÓÀÌ Á¾·áµÇÁö ¾Êµµ·Ï ¹«ÇÑ·çÇÁ
+	// ê²Œìž„ì´ ì¢…ë£Œë˜ì§€ ì•Šë„ë¡ ë¬´í•œë£¨í”„
 	while (true)
 	{
 		system("cls");
 		cout << "_______ ROCK PAPER SCSISSORS _______" << endl << endl;
-		cout << "1. °¡À§" << endl;
-		cout << "2. ¹ÙÀ§" << endl;
-		cout << "3. º¸" << endl;
-		cout << "4. Á¾·á" << endl << endl;
+		cout << "1. ê°€ìœ„" << endl;
+		cout << "2. ë°”ìœ„" << endl;
+		cout << "3. ë³´" << endl;
+		cout << "4. ì¢…ë£Œ" << endl << endl;
 
-		cout << "¸Þ´º¸¦ ¼±ÅÃÇÏ¼¼¿ä : ";
+		cout << "ë©”ë‰´ë¥¼ ì„ íƒí•˜ì„¸ìš” : ";
 
 		cin >> iPlayer;
 
-		// ¿¹¿ÜÃ³¸®
+		// ì˜ˆì™¸ì²˜ë¦¬
 		if (iPlayer < SCISSORS || iPlayer > END)
 		{
-			cout << "Àß¸øµÈ °ªÀ» ÀÔ·ÂÇÏ¿´½À´Ï´Ù." << endl;
+			cout << "ìž˜ëª»ëœ ê°’ì„ ìž…ë ¥í•˜ì˜€ìŠµë‹ˆë‹¤." << endl;
 			system("pause");
 			continue;
 		}
 
-		// Á¾·á ¿¹¿ÜÃ³¸®
+		// ì¢…ë£Œ ì˜ˆì™¸ì²˜ë¦¬
 		else if (iPlayer == END)
 			break;
 
-		// ÄÄÇ»ÅÍÀÇ °ª ·£´ýÇÏ°Ô ¼³Á¤
+		// ì»´í“¨í„°ì˜ ê°’ ëžœë¤í•˜ê²Œ ì„¤ì •
 		iComputer = rand() % 3 + SCISSORS;
 
 		
-		// °¢ °ª¿¡ ¸Â°Ô Ãâ·Â
+		// ê° ê°’ì— ë§žê²Œ ì¶œë ¥
 		switch (iPlayer)
 		{
 		case SCISSORS:
-			cout << strName << " : °¡À§" << endl;
+			cout << strName << " : ê°€ìœ„" << endl;
 			break;
 		case ROCK:
-			cout << strName << " : ¹ÙÀ§" << endl;
+			cout << strName << " : ë°”ìœ„" << endl;
 			break;
 		case PAPER:
-			cout << strName << " : º¸" << endl;
+			cout << strName << " : ë³´" << endl;
 			break;
 		}
 
 		switch (iComputer)
 		{
 		case SCISSORS:
-			cout << EnemyName << " : °¡À§" << endl;
+			cout << EnemyName << " : ê°€ìœ„" << endl;
 			break;
 		case ROCK:
-			cout << EnemyName << " : ¹ÙÀ§" << endl;
+			cout << EnemyName << " : ë°”ìœ„" << endl;
 			break;
 		case PAPER:
-			cout << EnemyName << " : º¸" << endl;
+			cout << EnemyName << " : ë³´" << endl;
 			break;
 		}
 
-		// ½ÂºÎÆÇÁ¤
+		// ìŠ¹ë¶€íŒì •
 		int iWin = iPlayer - iComputer;
 
 		cout << "______________ Result ______________" << endl << endl;
@@ -120,29 +120,7 @@ int main()
 		system("pause");
 	}
 
-	cout << "°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù." << endl;
+	cout << "ê²Œìž„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤." << endl;
 
 	return 0;
 }
-
-/*
-	º¹½À ¹æ¹ý
-
-	1.	¼ö¾÷½Ã°£¿¡ ³ëÆ®ÇÊ±â¸¦ ÇÑ´Ù.
-		³ëÆ®ÇÊ±â´Â ¼ö¾÷ÀÇ ÄÚµå ÀÛ¼º ±Ù°Å¸¦ À§ÁÖ·Î ¾´´Ù. ¸¸µç ÀÌÀ¯¶ó´ø°¡.
-
-	2.	³ëÆ®ÇÊ±â'¸¸' º¸°í ¼ö¾÷ ÄÚµå¸¦ Âü°íÇÏÁö ¾Ê°í ¾î¶»°Ô ¸¸µé¾î¾ß µÇ´ÂÁö »ý°¢ÇØº»´Ù.
-
-	3.	¼ö¾÷ÄÚµå¸¦ º¸Áö ¾Ê°í ±×·¸°Ô ±¸»óÇÑ »ý°¢À¸·Î¸¸ Á÷Á¢ ÄÚµå¸¦ ÀÛ¼ºÇØº»´Ù.
-
-	4.	¸¸¾à ¸·È÷´Â »óÈ²ÀÌ ¿Â´Ù¸é ¼ö¾÷ÄÚµå¸¦ º¸°í ÁÖ¼®À» Á÷Á¢ ´õ »ó¼¼ÇÏ°Ô ´Þ¾Æº»´Ù.
-
-	5.	±×·¸°Ô »ý°¢À» Á¤¸®ÇÏ°í ´Ù½Ã ÄÚµå¸¦ ÀÛ¼ºÇØº»´Ù.
-
-	6.	±×·¡µµ ¾î·Æ´Ù¸é ¼ö¾÷ÄÚµå¸¦ ÇÑ¹ø ÈÈ¾îº¸°í ´Ù½Ã ÄÚµå¸¦ ÀÛ¼ºÇØº»´Ù.
-
-	7.	¾Èº¸°í ½º½º·Î ¸¸µé ¼ö ÀÖÀ» ¶§ ±îÁö ¹Ýº¹ÇÑ´Ù.
-
-	8.	µµÀúÈ÷ ¾ÈµÇ¸é ÄÚµå¸¦ Âü°íÇØ°¡¸é¼­ ÀÛ¼ºÇØº»´Ù. (¹Þ¾Æ¾²±â)
-		(¹Ýº¹)
-*/
